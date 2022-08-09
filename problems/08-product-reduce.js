@@ -15,14 +15,18 @@ console.log(productWithReduce([4, 3])); // 12
 
 */
 
-let productWithReduce = function(nums) {
+let productWithReduce = function (nums) {
     // Your code here
+    let product = nums.reduce(function (total, num) {
+        return total *= num;
+    }, 1)
+    return product;
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 try {
-  module.exports = productWithReduce;
+    module.exports = productWithReduce;
 } catch (e) {
-  module.exports = null;
-}
+    module.exports = null;
+}
